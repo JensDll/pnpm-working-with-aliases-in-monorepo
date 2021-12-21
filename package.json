@@ -1,0 +1,34 @@
+{
+  "name": "pnpm-alias",
+  "version": "1.0.0",
+  "scripts": {
+    "vue2": "pnpm run dev --filter \"vue2-app\"",
+    "vue3": "pnpm run dev --filter \"vue3-app\"",
+    "postinstall": "node scripts/pnpm-link-vue.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "execa": "6.0.0",
+    "prettier": "2.5.1",
+    "vue2": "npm:vue@2.6.14",
+    "vue3": "npm:vue@3.2.26"
+  },
+  "This will work with vue2": {
+    "vue": "2.6.14",
+    "vue3": "npm:vue@3.2.26"
+  },
+  "This will work with vue3": {
+    "vue": "3.2.26",
+    "vue2": "npm:vue@2.6.14"
+  },
+  "Maybe even make this work": {
+    "vue2": "npm:vue@2.6.14",
+    "vue3": "npm:vue@3.2.26"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "arrowParens": "avoid",
+    "trailingComma": "none",
+    "semi": false
+  }
+}
